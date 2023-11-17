@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Calificaciones</title>
+  <!-- Incluir Bootstrap CSS (puedes descargarlo o usar un CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>Lista de Calificaciones</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Puntuación</th>
+          <th scope="col">Tiempo de duracion</th>
+          <th scope="col">Usuario</th>
+          <!-- Agrega más encabezados según tus datos -->
+        </tr>
+      </thead>
+      <tbody>
+        <% ratings.forEach(rating => { %>
+          <tr>
+            <td><%= rating.userId %></td>
+            <td><%= rating.rating %></td>
+            <td><%= rating.timestamp %></td>            
+            <td><%= rating.movieId %></td>            
+            <!-- Agrega más celdas según tus datos -->
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Incluir Bootstrap JS (puedes descargarlo o usar un CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+# COMANDOS
+
+# Construir e iniciar los contenedores
+docker-compose up --build
+
+# Acceso a Redis CLI:
+docker exec -it <your_redis_container_name_or_id> redis-cli
+
+# Inspeccionar Cached Data
+GET movies_data
+GET ratings_data
